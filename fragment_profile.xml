@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Profile Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_header"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="28dp"
+            android:paddingBottom="36dp">
+
+            <!-- Avatar -->
+            <FrameLayout
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/bg_avatar">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="BS"
+                    android:textColor="@color/surface"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_name"
+                android:textColor="@color/surface"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_email"
+                android:textColor="#B7E4C7"
+                android:textSize="13sp"
+                android:layout_marginTop="4dp" />
+
+            <!-- Edit Profile Button -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Profil"
+                android:textColor="@color/primary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:background="@color/surface"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="8dp"
+                android:layout_marginTop="14dp" />
+        </LinearLayout>
+
+        <!-- Stats Row -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="-20dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="@color/surface">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <!-- Orders -->
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12" android:textColor="@color/primary" android:textSize="22sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/profile_orders" android:textColor="@color/text_secondary" android:textSize="12sp" android:layout_marginTop="2dp" />
+                </LinearLayout>
+
+                <!-- Divider -->
+                <View android:layout_width="1dp" android:layout_height="40dp" android:background="@color/divider" />
+
+                <!-- Saved -->
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5" android:textColor="@color/primary" android:textSize="22sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/profile_saved" android:textColor="@color/text_secondary" android:textSize="12sp" android:layout_marginTop="2dp" />
+                </LinearLayout>
+
+                <!-- Divider -->
+                <View android:layout_width="1dp" android:layout_height="40dp" android:background="@color/divider" />
+
+                <!-- Reviews -->
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="8" android:textColor="@color/primary" android:textSize="22sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/profile_reviews" android:textColor="@color/text_secondary" android:textSize="12sp" android:layout_marginTop="2dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Menu Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Akun"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:paddingHorizontal="20dp"
+            android:paddingBottom="8dp"
+            android:letterSpacing="0.08" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/surface">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+                <!-- Pengaturan Akun -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="52dp" android:orientation="horizontal" android:gravity="center_vertical" android:paddingHorizontal="16dp">
+                    <TextView android:layout_width="32dp" android:layout_height="wrap_content" android:text="⚙️" android:textSize="18sp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/profile_settings" android:textColor="@color/text_primary" android:textSize="14sp" android:paddingStart="8dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="›" android:textColor="@color/text_hint" android:textSize="20sp" />
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" android:layout_marginStart="56dp" />
+
+                <!-- Notifikasi -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="52dp" android:orientation="horizontal" android:gravity="center_vertical" android:paddingHorizontal="16dp">
+                    <TextView android:layout_width="32dp" android:layout_height="wrap_content" android:text="🔔" android:textSize="18sp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Notifikasi" android:textColor="@color/text_primary" android:textSize="14sp" android:paddingStart="8dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="›" android:textColor="@color/text_hint" android:textSize="20sp" />
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" android:layout_marginStart="56dp" />
+
+                <!-- Alamat -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="52dp" android:orientation="horizontal" android:gravity="center_vertical" android:paddingHorizontal="16dp">
+                    <TextView android:layout_width="32dp" android:layout_height="wrap_content" android:text="📍" android:textSize="18sp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Alamat Saya" android:textColor="@color/text_primary" android:textSize="14sp" android:paddingStart="8dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="›" android:textColor="@color/text_hint" android:textSize="20sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Lainnya Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lainnya"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:paddingHorizontal="20dp"
+            android:paddingBottom="8dp"
+            android:letterSpacing="0.08" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/surface">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+                <!-- Bantuan -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="52dp" android:orientation="horizontal" android:gravity="center_vertical" android:paddingHorizontal="16dp">
+                    <TextView android:layout_width="32dp" android:layout_height="wrap_content" android:text="❓" android:textSize="18sp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/profile_help" android:textColor="@color/text_primary" android:textSize="14sp" android:paddingStart="8dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="›" android:textColor="@color/text_hint" android:textSize="20sp" />
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" android:layout_marginStart="56dp" />
+
+                <!-- Tentang -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="52dp" android:orientation="horizontal" android:gravity="center_vertical" android:paddingHorizontal="16dp">
+                    <TextView android:layout_width="32dp" android:layout_height="wrap_content" android:text="ℹ️" android:textSize="18sp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/profile_about" android:textColor="@color/text_primary" android:textSize="14sp" android:paddingStart="8dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="›" android:textColor="@color/text_hint" android:textSize="20sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Logout Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_card"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🚪" android:textSize="18sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_logout"
+                android:textColor="#EF4444"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Version -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/version"
+            android:textColor="@color/text_hint"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:layout_width="match_parent" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
